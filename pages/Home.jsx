@@ -1,5 +1,6 @@
 import { ThemeToggle } from "@/components/ThemeToggle.jsx";
 import { StartBackground } from "@/components/StartBackground.jsx";
+import { NavigationBar } from "@/components/NavigationBar.jsx";
 
 export const Home = () => {
   return (
@@ -9,7 +10,7 @@ export const Home = () => {
       {/* Background Effects */}
       <StartBackground />
       {/* Navigation Bar */}
-
+      <NavigationBar />
       {/* Main Content */}
 
       {/* Footer */}

@@ -23,7 +23,7 @@ export const StartBackground = () => {
   };
 
   const generateMeteors = () => {
-    const numberOfMeteors = 5;
+    const numberOfMeteors = 4;
 
     const newMeteors = Array.from({ length: numberOfMeteors }, (_, i) => ({
       id: i,
@@ -43,6 +43,7 @@ export const StartBackground = () => {
 
     const handleResize = () => generateStars();
     window.addEventListener("resize", handleResize);
+
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
@@ -68,8 +69,8 @@ export const StartBackground = () => {
           key={meteor.id}
           className="meteor animate-meteor"
           style={{
-            width: `${meteor.size}px`,
-            height: `${meteor.size}px`,
+            width: meteor.size * 35 + "px",
+            height: meteor.size * 2 + "px",
             left: `${meteor.x}%`,
             top: `${meteor.y}%`,
             animationDelay: `${meteor.delay}s`,
